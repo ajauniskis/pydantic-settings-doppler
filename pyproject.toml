@@ -1,17 +1,46 @@
 [project]
 name = "pydantic-settings-doppler"
 version = "0.1.0"
-description = ""
+description = "Settings management for Pydantic models using Doppler"
 authors = [
     {name = "Algirdas Jauniskis",email = "jauniskis.a@gmail.com"}
 ]
 readme = "README.md"
+license = 'MIT'
+keywords = [ "pydantic", "settings", "doppler", "configuration", "environment variables" ]
 requires-python = ">=3.9"
 dependencies = [
     "pydantic-settings (>=2.0,<3.0)",
     "doppler-sdk (>=1.3.0,<2.0.0)"
 ]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: System Administrators',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: Unix',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft',
+    'Environment :: Console',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Internet',
+]
 
+[project.urls]
+Homepage = "https://github.com/ajauniskis/pydantic-settings-doppler"
+# Documentation = ""
+Repository = "https://github.com/ajauniskis/pydantic-settings-doppler"
+"Bug Tracker" = "https://github.com/ajauniskis/pydantic-settings-doppler/issues"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -24,7 +53,6 @@ flake8 = "^7.1.1"
 flake8-pyproject = "^1.2.3"
 pytest = "^8.3.4"
 pytest-cov = "^6.1.1"
-
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
