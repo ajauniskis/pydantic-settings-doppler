@@ -49,6 +49,7 @@ jobs:
           slug: ajauniskis/pydantic-settings-doppler
           files: coverage.xml
           fail_ci_if_error: true
+          flags: unittests
 
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
