@@ -40,6 +40,7 @@ classifiers = [
 Homepage = "https://github.com/ajauniskis/pydantic-settings-doppler"
 # Documentation = ""
 Repository = "https://github.com/ajauniskis/pydantic-settings-doppler"
+Changelog = "https://github.com/ajauniskis/pydantic-settings-doppler/blob/main/CHANGELOG.md"
 "Bug Tracker" = "https://github.com/ajauniskis/pydantic-settings-doppler/issues"
 
 [build-system]
