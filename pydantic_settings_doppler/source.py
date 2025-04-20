@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 from dopplersdk import DopplerSDK
 from pydantic.fields import FieldInfo
@@ -17,9 +17,9 @@ class DopplerSettingsSource(PydanticBaseSettingsSource):
     def __init__(
         self,
         settings_cls: type,
-        token: str | None = None,
-        project_id: str | None = None,
-        config_id: str | None = None,
+        token: Optional[str] = None,
+        project_id: Optional[str] = None,
+        config_id: Optional[str] = None,
     ) -> None:
         super().__init__(settings_cls)
         self._client = self._initialize_client(token)
@@ -67,12 +67,12 @@ class DopplerSettingsSource(PydanticBaseSettingsSource):
 
         return field_value, field_name, False
 
-    def _initialize_client(self, token: str | None) -> DopplerSDK:
+    def _initialize_client(self, token: Optional[str]) -> DopplerSDK:
         token = self._get_required_value(token, "DOPPLER_TOKEN", "Doppler access token")
         return DopplerSDK(access_token=token)
 
     def _get_required_value(
-        self, value: str | None, env_var: str, description: str
+        self, value: Optional[str], env_var: str, description: str
     ) -> str:
         result = value or os.environ.get(env_var)
         if not result:
