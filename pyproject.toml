@@ -53,4 +53,4 @@ exclude = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov --cov-branch --cov-report=xml"
+addopts = "--cov --cov-branch --cov-report=xml --junitxml=./junit.xml"
