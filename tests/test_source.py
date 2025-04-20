@@ -35,16 +35,14 @@ class TestDopplerSettingsSource:
         )
         source._client.secrets.get = MagicMock(
             return_value=SecretsGetResponse(
-                value={
-                    "raw": "mocked-database_url"
-                }  # pyright: ignore [reportArgumentType]
+                value={"raw": "mocked-database_url"}  # pyright: ignore [reportArgumentType]
             )
         )
         values = source()
         assert values["database_url"] == "mocked-database_url"
 
     @patch("pydantic_settings_doppler.source.DopplerSDK", new=MockDopplerSDK)
-    def test_missing_required_field(self):
+    def test_missing_required_argument(self):
         class Settings(BaseSettings):
             api_key: str
 
@@ -72,6 +70,23 @@ class TestDopplerSettingsSource:
         source._client.secrets.get = MagicMock(return_value=None)
         values = source()
         assert values["optional_field"] == "default_value"
+
+    @patch("pydantic_settings_doppler.source.DopplerSDK", new=MockDopplerSDK)
+    def test_missing_value_for_required_field(self):
+        class Settings(BaseSettings):
+            required_field: str
+
+        source = DopplerSettingsSource(
+            settings_cls=Settings,
+            token="mock-token",
+            project_id="mock-project",
+            config_id="mock-config",
+        )
+        source._client.secrets.get = MagicMock(
+            return_value=SecretsGetResponse(value={"raw": None})
+        )
+        with pytest.raises(SettingsError, match="required_field not found in Doppler"):
+            source()
 
     @patch.dict(os.environ, {"DOPPLER_CONFIG_ID": "env-config-id"})
     @patch("pydantic_settings_doppler.source.DopplerSDK", new=MockDopplerSDK)
