@@ -1,0 +1,81 @@
+site_name: Pydantic Settings Doppler
+site_description: Doppler for Pydantic Settings
+repo_url: https://github.com/ajauniskis/pydantic-settings-doppler
+site_url: https://ajauniskis.github.io/pydantic-settings-doppler
+
+nav:
+  - Docs: index.md
+  - Configuration: configuration.md
+  - Examples: examples.md
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  features:
+    - content.action.edit
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - header.autohide
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  favicon: img/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed
+
+extra:
+  pymdownx:
+    highlight:
+      linenums: true
+      guess_lang: false
+    superfences:
+      custom_fences:
+        - name: python
+          class: highlight-python
+          language: python
+
+plugins:
+  - mkdocstrings
+  - search
+  - git-committers:
+      repository: ajauniskis/pydantic-settings-doppler
+      branch: main
