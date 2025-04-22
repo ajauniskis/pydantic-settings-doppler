@@ -1,6 +1,51 @@
 # CHANGELOG
 
 
+## v0.1.1 (2025-04-22)
+
+### Bug Fixes
+
+- Docs ([#6](https://github.com/ajauniskis/pydantic-settings-doppler/pull/6),
+  [`c42a8df`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/c42a8df53a1096a9faa89526400b21a47b8c16a3))
+
+- Package classifier
+  ([`1432280`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/14322805f581471995a195eb55d95385b740477a))
+
+- Package classifier ([#7](https://github.com/ajauniskis/pydantic-settings-doppler/pull/7),
+  [`740ab7e`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/740ab7e27fa584eed2555e1cef4fce5c93b60a16))
+
+- Symlink
+  ([`7634e0c`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/7634e0c8a3744013a087c6a9173c6f6df80ace44))
+
+- Update README and examples for clarity and formatting improvements
+  ([`3905237`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/3905237069569d65d4d44e4fccdcd3eedb06e640))
+
+### Chores
+
+- Update project classifiers and documentation links in pyproject.toml
+  ([`a252321`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/a252321f75ac2fc3f1658b1cb31593277a35ff0e))
+
+### Continuous Integration
+
+- Add GitHub Pages deployment for documentation updates
+  ([`41b73d9`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/41b73d9197af7fe3188683a6e816d8fab865dc8c))
+
+### Documentation
+
+- Add documentation for pydantic-settings-doppler
+  ([`daa5c9a`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/daa5c9a5dcb16f9079b2ea924009e1fdd598360b))
+
+- Created configuration.md to explain environment variable setup and error handling. - Added
+  examples.md with practical usage scenarios including basic examples, environment variable
+  integration, direct initialization, error handling, and logging. - Introduced favicon.svg for site
+  branding. - Created index.md to serve as the main entry point for documentation. - Configured
+  mkdocs.yml for site structure, theme, and plugins.
+
+- Add gh pages documentation with mkdocs
+  ([#5](https://github.com/ajauniskis/pydantic-settings-doppler/pull/5),
+  [`6e4e2a3`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/6e4e2a383bc268109d79f43aaa81479b672ab605))
+
+
 ## v0.1.0 (2025-04-20)
 
 ### Bug Fixes
