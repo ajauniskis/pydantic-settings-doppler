@@ -24,7 +24,7 @@ export DOPPLER_CONFIG_ID="your-config-id"
 
 Alternatively, you can use a `.env` file:
 
-```env
+```ini
 DOPPLER_TOKEN=your-doppler-access-token
 DOPPLER_PROJECT_ID=your-project-id
 DOPPLER_CONFIG_ID=your-config-id
@@ -74,6 +74,9 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 class AppSettings(BaseSettings):
-    db_url: str = Field(alias="DATABASE_URL")
-    api_key: str
+    db_url: str = Field(alias="DATABASE_URL")  # (1)!
+    api_key: str  # (2)!
 ```
+
+1. Maps the `db_url` field to the `DATABASE_URL` key in Doppler.
+2. Uses the default field name `API_KEY` in uppercase as the key.

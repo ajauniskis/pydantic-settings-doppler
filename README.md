@@ -32,7 +32,6 @@ Here's a quick example to get you started:
 ```python
 from pydantic_settings import BaseSettings
 from pydantic_settings.sources import PydanticBaseSettingsSource
-
 from pydantic_settings_doppler import DopplerSettingsSource
 
 
