@@ -1,6 +1,13 @@
 # Pydantic Settings Doppler
+
+[![CI](https://github.com/ajauniskis/pydantic-settings-doppler/actions/workflows/test.yaml/badge.svg)](https://github.com/ajauniskis/pydantic-settings-doppler/actions/workflows/test.yaml)
 [![codecov](https://codecov.io/gh/ajauniskis/pydantic-settings-doppler/graph/badge.svg?token=XB1M3ET2H7)](https://codecov.io/gh/ajauniskis/pydantic-settings-doppler)
 [![Pydantic v2 only](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json)](https://docs.pydantic.dev/latest/contributing/#badges)
+[![PyPI - Implementation](https://img.shields.io/pypi/implementation/pydantic-settings-doppler)](https://pypi.org/project/pydantic-settings-doppler)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pydantic-settings-doppler)](https://pypi.org/project/pydantic-settings-doppler)
+[![PyPI - License](https://img.shields.io/pypi/l/pydantic-settings-doppler)](https://pypi.org/project/pydantic-settings-doppler)
+![PyPI - Version](https://img.shields.io/pypi/v/pydantic-settings-doppler)
+
 
 Pydantic Settings for Doppler integration! This package provides a seamless way to load configuration values from [Doppler](https://www.doppler.com/) into your Pydantic models. It leverages the power of Doppler's secrets management and Pydantic's settings management to make your application configuration secure and easy to use.
 
