@@ -78,6 +78,24 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         if: steps.release.outputs.released == 'true'
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        uses: Gr1N/setup-poetry@v9
+
+      - name: Install Dependencies
+        run: |
+          poetry install --no-interaction --no-ansi
+
+      - name: Cache Poetry Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+
       - name: Publish Docksite | Upload to GitHub Pages
         if: steps.release.outputs.released == 'true'
         run: |

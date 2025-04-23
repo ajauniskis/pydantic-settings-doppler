@@ -34,7 +34,8 @@ jobs:
         run: |
           poetry install --no-interaction --no-ansi
 
-      - uses: actions/cache@v4
+      - name: Cache Poetry Dependencies
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pypoetry/virtualenvs
           key: ${{ runner.os }}-poetry-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
