@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.1.2 (2025-04-23)
+
+### Bug Fixes
+
+- Docs publish dependencies
+  ([`b9ee445`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/b9ee4456a61846c509cd3dd37edf2d86ff329db7))
+
+- Docs publish dependencies ([#8](https://github.com/ajauniskis/pydantic-settings-doppler/pull/8),
+  [`45e9a27`](https://github.com/ajauniskis/pydantic-settings-doppler/commit/45e9a27809cfd04bbc095dcdf1fcdf2edc2f275d))
+
+
 ## v0.1.1 (2025-04-22)
 
 ### Bug Fixes

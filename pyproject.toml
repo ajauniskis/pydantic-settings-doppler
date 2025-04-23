@@ -1,6 +1,6 @@
 [project]
 name = "pydantic-settings-doppler"
-version = "0.1.1"
+version = "0.1.2"
 description = "Settings management for Pydantic models using Doppler"
 authors = [
     {name = "Algirdas Jauniskis",email = "jauniskis.a@gmail.com"}
