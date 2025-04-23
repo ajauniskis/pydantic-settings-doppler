@@ -101,4 +101,4 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@users.noreply.github.com"
-          poetry run mkdocs gh-deploy --force --remote-branch gh-pages --remote-name origin --message "Update documentation for version ${{ steps.release.outputs.tag }}" --push
+          poetry run mkdocs gh-deploy --force --remote-branch gh-pages --remote-name origin --message "Update documentation for version ${{ steps.release.outputs.tag }}"
