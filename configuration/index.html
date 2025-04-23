@@ -608,22 +608,22 @@
 </ul>
 <h3 id="example">Example ✅<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Set the environment variables in your shell:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DOPPLER_TOKEN</span><span class="o">=</span><span class="s2">&quot;your-doppler-access-token&quot;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DOPPLER_PROJECT_ID</span><span class="o">=</span><span class="s2">&quot;your-project-id&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DOPPLER_CONFIG_ID</span><span class="o">=</span><span class="s2">&quot;your-config-id&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Alternatively, you can use a <code>.env</code> file:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>DOPPLER_TOKEN=your-doppler-access-token
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>DOPPLER_PROJECT_ID=your-project-id
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>DOPPLER_CONFIG_ID=your-config-id
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="na">DOPPLER_TOKEN</span><span class="o">=</span><span class="s">your-doppler-access-token</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="na">DOPPLER_PROJECT_ID</span><span class="o">=</span><span class="s">your-project-id</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="na">DOPPLER_CONFIG_ID</span><span class="o">=</span><span class="s">your-config-id</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="direct-initialization">Direct Initialization 🛠️<a class="headerlink" href="#direct-initialization" title="Permanent link">&para;</a></h2>
 <p>You can also pass the configuration values directly to <code>DopplerSettingsSource</code> when initializing it:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
@@ -644,7 +644,7 @@
 <p>If any of config variables are not found either in environment variables on not passed in the constructor, a <code>SettingsError</code> will be raised.</p>
 <h2 id="logging-configuration">Logging Configuration 📝<a class="headerlink" href="#logging-configuration" title="Permanent link">&para;</a></h2>
 <p><code>pydantic-settings-doppler</code> uses Python's <code>logging</code> module to provide debug and warning messages. To enable debug logging, configure the logger:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
@@ -657,7 +657,7 @@
 <h2 id="advanced-configuration">Advanced Configuration 🔧<a class="headerlink" href="#advanced-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="customizing-field-names">Customizing Field Names<a class="headerlink" href="#customizing-field-names" title="Permanent link">&para;</a></h3>
 <p>By default, <code>DopplerSettingsSource</code> uses the field name in uppercase as the key to retrieve secrets from Doppler. You can customize this behavior by setting the <code>alias</code> or <code>serialization_alias</code> attribute in your Settings model:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
@@ -666,9 +666,13 @@
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic_settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseSettings</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">AppSettings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="n">db_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">api_key</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="n">db_url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">)</span>  <span class="c1"># (1)!</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">api_key</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># (2)!</span>
 </span></code></pre></div></td></tr></table></div>
+<ol>
+<li>Maps the <code>db_url</code> field to the <code>DATABASE_URL</code> key in Doppler.</li>
+<li>Uses the default field name <code>API_KEY</code> in uppercase as the key.</li>
+</ol>
 
 
 
